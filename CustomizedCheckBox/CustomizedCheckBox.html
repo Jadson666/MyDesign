@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    section {
+      display: flex;
+    }
+    label {
+      cursor: pointer;
+    }
+    
+    label.boxLabel {
+      display: block;
+      height: 14px;
+      flex:0 0 14px;
+      border-radius: 25%;
+      border: 1px solid lightgray;
+      margin-right: 10px;
+      margin-top: 4px;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    input:disabled~label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+
+    svg {
+      display: none;
+    }
+
+    input:checked+label>svg {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <input id="isForMappingInputAndLable" type="checkbox"></input>
+    <label for="isForMappingInputAndLable" class="boxLabel">
+      <svg height="12" width="12">
+          <path d="M 3 8 l 3 5" stroke="#18346b" stroke-width="2" fill="none" />
+          <path d="M 5 12 l 5 -8" stroke="#18346b" stroke-width="2" fill="none" />
+      </svg>
+    </label>
+    <label class="textLabel" for="isForMappingInputAndLable">this is checkbox</label>
+  </seciton>
+</body>
+</html>
