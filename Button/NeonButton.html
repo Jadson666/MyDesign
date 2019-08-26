@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Neon Button</title>
+  <style>
+    body {
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      font-family: consolas;
+    }
+
+    button {
+      height: 50px;
+      width: 200px;
+      font-size: 1.2em;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: darkred;
+      background-color: black;
+      box-sizing: border-box;
+      border-width: 0;
+      outline: none;
+    }
+
+    button:hover {
+      transition-delay: 1s;
+      color: black;
+      background-color: #f52424;
+      box-shadow: 0 0 20px #f52424,
+                  0 0 40px #f52424,
+                  0 0 80px #f52424;
+    }
+
+    button {
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    button div {
+      position: absolute;
+    }
+
+    button div:nth-child(1) {
+      height: 2px;
+      top:0;
+      left: -100%;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, #f52424)
+      
+    }
+
+    button:hover div:nth-child(1){
+      transition: 0.5s;
+      left: 100%;
+    }
+
+    button div:nth-child(3) {
+      height: 2px;
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      background: linear-gradient(270deg, transparent, #f52424)
+      
+    }
+
+    button:hover div:nth-child(3){
+      transition: 0.5s;
+      transition-delay: 0.5s;
+      right: 100%;
+    }
+
+    button div:nth-child(2) {
+      width: 2px;
+      right: 0;
+      top: -100%;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #f52424)
+      
+    }
+
+    button:hover div:nth-child(2){
+      transition: 0.5s;
+      transition-delay: 0.25s;
+      top: 100%;
+    }
+
+    button div:nth-child(4) {
+      width: 2px;
+      left: 0;
+      bottom: -100%;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #f52424)
+      
+    }
+
+    button:hover div:nth-child(4){
+      transition: 0.5s;
+      transition-delay: 0.75s;
+      bottom: 100%;
+    }
+
+    </style>
+</head>
+<body>
+  <div class="neon_button">
+    <button>
+      Neon Button
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    
+  </div>
+</body>
+</html>
